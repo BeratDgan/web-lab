@@ -1,8 +1,13 @@
 function App() {
   return (
     <>
+      {/* Skip Link */}
+      <a href="#main-content" className="skip-link">
+        Ana içeriğe atla
+      </a>
+
       <header>
-        <nav>
+        <nav aria-label="Ana navigasyon">
           <ul>
             <li><a href="#hakkimda">Hakkımda</a></li>
             <li><a href="#projeler">Projeler</a></li>
@@ -11,14 +16,13 @@ function App() {
         </nav>
       </header>
 
-      <main>
+      <main id="main-content">
         <section id="hakkimda">
           <h2>Hakkımda</h2>
-          <figure >
-          <img src="images.png"
-          alt=" benim foto " />
-          <figcaption > Berat Doğan</ figcaption >
-          </figure >
+          <figure>
+            <img src="images.png" alt="Berat Doğan fotoğrafı" />
+            <figcaption>Berat Doğan</figcaption>
+          </figure>
           <p>Ad Soyad: Berat Doğan</p>
           <p>Öğrenci No: 235541062</p>
           <p>Yaş: 21</p>
@@ -28,24 +32,22 @@ function App() {
         <section id="projeler">
           <h2>Projelerim</h2>
           <ul>
-            <li>Proje 1: Web Tabanlı Not Alma Uygulaması</li>
-            <figure >
-          <img src="image.png"
-          alt=" benim porje " />
-          <figcaption > Web Tabanlı Not Alma Uygulaması</ figcaption >
-          </figure >
+            <li>
+              Proje 1: Web Tabanlı Not Alma Uygulaması
+              <figure>
+                <img src="image.png" alt="Not alma uygulaması ekran görüntüsü" />
+                <figcaption>Web Tabanlı Not Alma Uygulaması</figcaption>
+              </figure>
+            </li>
             <li>Proje 2: Kişisel Blog Sitesi</li>
             <li>Proje 3: E-Ticaret Platformu</li>
           </ul>
         </section>
 
         <section id="iletisim">
-          <h2>
-            İletişim Bilgileri
-            
-          </h2>
-          <p>Email:dgan.berat@gmail.com</p>
-          <p>Telefon: 0555 555 55 55</p>
+          <h2>İletişim Bilgileri</h2>
+          <p>Email: <a href="mailto:dgan.berat@gmail.com">dgan.berat@gmail.com</a></p>
+          <p>Telefon: <a href="tel:05555555555">0555 555 55 55</a></p>
         </section>
       </main>
 
