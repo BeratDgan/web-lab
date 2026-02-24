@@ -45,9 +45,79 @@ function App() {
         </section>
 
         <section id="iletisim">
-          <h2>İletişim Bilgileri</h2>
-          <p>Email: <a href="mailto:dgan.berat@gmail.com">dgan.berat@gmail.com</a></p>
-          <p>Telefon: <a href="tel:05555555555">0555 555 55 55</a></p>
+          <h2>İletişim</h2>
+
+          <form noValidate>
+
+            {/* Ad */}
+            <div>
+              <label htmlFor="ad">Ad</label>
+              <input
+                id="ad"
+                name="ad"
+                type="text"
+                required
+                minLength={3}
+                aria-describedby="ad-hata"
+              />
+              <small id="ad-hata" role="alert">
+                Ad alanı en az 3 karakter olmalıdır.
+              </small>
+            </div>
+
+            {/* E-posta */}
+            <div>
+              <label htmlFor="email">E-posta</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                aria-describedby="email-hata"
+              />
+              <small id="email-hata" role="alert">
+                Geçerli bir e-posta adresi giriniz.
+              </small>
+            </div>
+
+            {/* Konu */}
+            <div>
+              <label htmlFor="konu">Konu</label>
+              <select
+                id="konu"
+                name="konu"
+                required
+                aria-describedby="konu-hata"
+              >
+                <option value="">Seçiniz</option>
+                <option value="genel">Genel Soru</option>
+                <option value="proje">Proje Hakkında</option>
+                <option value="is">İş Teklifi</option>
+              </select>
+              <small id="konu-hata" role="alert">
+                Lütfen bir konu seçiniz.
+              </small>
+            </div>
+
+            {/* Mesaj */}
+            <div>
+              <label htmlFor="mesaj">Mesaj</label>
+              <textarea
+                id="mesaj"
+                name="mesaj"
+                required
+                minLength={10}
+                rows={4}
+                aria-describedby="mesaj-hata"
+              ></textarea>
+              <small id="mesaj-hata" role="alert">
+                Mesaj en az 10 karakter olmalıdır.
+              </small>
+            </div>
+
+            <button type="submit">Gönder</button>
+
+          </form>
         </section>
       </main>
 
