@@ -14,6 +14,11 @@ function App() {
       <main>
         <section id="hakkimda">
           <h2>Hakkımda</h2>
+          <figure >
+          <img src="images.png"
+          alt=" benim foto " />
+          <figcaption > Berat Doğan</ figcaption >
+          </figure >
           <p>Ad Soyad: Berat Doğan</p>
           <p>Öğrenci No: 235541062</p>
           <p>Yaş: 21</p>
@@ -24,6 +29,11 @@ function App() {
           <h2>Projelerim</h2>
           <ul>
             <li>Proje 1: Web Tabanlı Not Alma Uygulaması</li>
+            <figure >
+          <img src="image.png"
+          alt=" benim porje " />
+          <figcaption > Web Tabanlı Not Alma Uygulaması</ figcaption >
+          </figure >
             <li>Proje 2: Kişisel Blog Sitesi</li>
             <li>Proje 3: E-Ticaret Platformu</li>
           </ul>
