@@ -61,7 +61,7 @@ function App() {
             <h3>Web Tabanlı Not Alma Uygulaması</h3>
             <p>
               Kullanıcıların not oluşturabildiği ve düzenleyebildiği
-              full-stack bir uygulama.
+              full stack bir uygulama.
             </p>
             <a href="#">Projeyi Gör</a>
           </article>
