@@ -6,50 +6,81 @@ function App() {
         Ana içeriğe atla
       </a>
 
+      {/* HEADER */}
       <header>
+        <div>
+          <h1>Berat Doğan</h1>
+        </div>
+
         <nav aria-label="Ana navigasyon">
           <ul>
             <li><a href="#hakkimda">Hakkımda</a></li>
-            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#projeler">Projelerim</a></li>
             <li><a href="#iletisim">İletişim</a></li>
           </ul>
         </nav>
       </header>
 
+      {/* MAIN */}
       <main id="main-content">
+
+        {/* HAKKIMDA */}
         <section id="hakkimda">
           <h2>Hakkımda</h2>
+
           <figure>
-            <img src="images.png" alt="Berat Doğan fotoğrafı" />
+            <img
+              src="images.png"
+              alt="Berat Doğan profil fotoğrafı"
+              width="200"
+            />
             <figcaption>Berat Doğan</figcaption>
           </figure>
-          <p>Ad Soyad: Berat Doğan</p>
-          <p>Öğrenci No: 235541062</p>
-          <p>Yaş: 21</p>
-          <p>Cinsiyet: Erkek</p>
-        </section>
 
-        <section id="projeler">
-          <h2>Projelerim</h2>
+          <p>
+            Bilgisayar Mühendisliği öğrencisiyim. Backend geliştirme,
+            cloud teknolojileri ve modern web uygulamalarıyla ilgileniyorum.
+          </p>
+
+          <h3>Kullandığım Teknolojiler</h3>
           <ul>
-            <li>
-              Proje 1: Web Tabanlı Not Alma Uygulaması
-              <figure>
-                <img src="image.png" alt="Not alma uygulaması ekran görüntüsü" />
-                <figcaption>Web Tabanlı Not Alma Uygulaması</figcaption>
-              </figure>
-            </li>
-            <li>Proje 2: Kişisel Blog Sitesi</li>
-            <li>Proje 3: E-Ticaret Platformu</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
           </ul>
         </section>
 
+        {/* PROJELER */}
+        <section id="projeler">
+          <h2>Projelerim</h2>
+
+          <article>
+            <h3>Web Tabanlı Not Alma Uygulaması</h3>
+            <p>
+              Kullanıcıların not oluşturabildiği ve düzenleyebildiği
+              full-stack bir uygulama.
+            </p>
+            <a href="#">Projeyi Gör</a>
+          </article>
+
+          <article>
+            <h3>Kişisel Blog Sitesi</h3>
+            <p>
+              Dinamik içerik yönetimi olan responsive bir blog platformu.
+            </p>
+            <a href="#">Projeyi Gör</a>
+          </article>
+        </section>
+
+        {/* İLETİŞİM */}
         <section id="iletisim">
           <h2>İletişim</h2>
 
           <form noValidate>
 
-            {/* Ad */}
             <div>
               <label htmlFor="ad">Ad</label>
               <input
@@ -61,11 +92,10 @@ function App() {
                 aria-describedby="ad-hata"
               />
               <small id="ad-hata" role="alert">
-                Ad alanı en az 3 karakter olmalıdır.
+                Ad en az 3 karakter olmalıdır.
               </small>
             </div>
 
-            {/* E-posta */}
             <div>
               <label htmlFor="email">E-posta</label>
               <input
@@ -80,7 +110,6 @@ function App() {
               </small>
             </div>
 
-            {/* Konu */}
             <div>
               <label htmlFor="konu">Konu</label>
               <select
@@ -99,7 +128,6 @@ function App() {
               </small>
             </div>
 
-            {/* Mesaj */}
             <div>
               <label htmlFor="mesaj">Mesaj</label>
               <textarea
@@ -116,13 +144,28 @@ function App() {
             </div>
 
             <button type="submit">Gönder</button>
-
           </form>
         </section>
       </main>
 
+      {/* FOOTER */}
       <footer>
         <p>&copy; 2025 Berat Doğan. Tüm hakları saklıdır.</p>
+
+        <nav aria-label="Sosyal medya bağlantıları">
+          <ul>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </nav>
       </footer>
     </>
   )

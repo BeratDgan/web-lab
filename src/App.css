@@ -24,15 +24,19 @@
   background: black;
   color: white;
   padding: 8px;
-  z-index: 100;
   text-decoration: none;
+  z-index: 100;
 }
 
 .skip-link:focus {
   top: 10px;
 }
 
-a:focus {
+a:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
   outline: 3px solid blue;
   outline-offset: 2px;
 }
