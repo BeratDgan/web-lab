@@ -43,13 +43,13 @@ function App() {
           </p>
 
           <h3>Kullandığım Teknolojiler</h3>
-          <ul>
+          <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
             <li>HTML5</li>
             <li>CSS3</li>
             <li>JavaScript</li>
             <li>React</li>
-            <li>Node.js</li>
-            <li>MongoDB</li>
+            <li>TypeScript</li>
+            <li>Git</li>
           </ul>
         </section>
 

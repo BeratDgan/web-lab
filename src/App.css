@@ -65,6 +65,23 @@ button:focus {
   color: #888;
 }
 
+/* ===== SKILL TAGS (Beceri Etiketleri) ===== */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+}
+
+.skill-tags li {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+}
+
 /* ===== HEADER ===== */
 header {
   display: flex;
