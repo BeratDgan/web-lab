@@ -28,29 +28,33 @@ function App() {
         <section id="hakkimda">
           <h2>Hakkımda</h2>
 
-          <figure>
-            <img
-              src="images.png"
-              alt="Berat Doğan profil fotoğrafı"
-              width="200"
-            />
-            <figcaption>Berat Doğan</figcaption>
-          </figure>
+          <div className="about-content">
+            <figure>
+              <img
+                src="images.png"
+                alt="Berat Doğan profil fotoğrafı"
+                width="200"
+              />
+              <figcaption>Berat Doğan</figcaption>
+            </figure>
 
-          <p>
-            Bilgisayar Mühendisliği öğrencisiyim. Backend geliştirme,
-            cloud teknolojileri ve modern web uygulamalarıyla ilgileniyorum.
-          </p>
+            <div>
+              <p>
+                Bilgisayar Mühendisliği öğrencisiyim. Backend geliştirme,
+                cloud teknolojileri ve modern web uygulamalarıyla ilgileniyorum.
+              </p>
 
-          <h3>Kullandığım Teknolojiler</h3>
-          <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>Git</li>
-          </ul>
+              <h3>Kullandığım Teknolojiler</h3>
+              <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Git</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* PROJELER */}
@@ -97,7 +101,7 @@ function App() {
 
           <form noValidate>
 
-            <div>
+            <div className="form-group">
               <label htmlFor="ad">Ad</label>
               <input
                 id="ad"
@@ -112,7 +116,7 @@ function App() {
               </small>
             </div>
 
-            <div>
+            <div className="form-group">
               <label htmlFor="email">E-posta</label>
               <input
                 id="email"
@@ -126,7 +130,7 @@ function App() {
               </small>
             </div>
 
-            <div>
+            <div className="form-group">
               <label htmlFor="konu">Konu</label>
               <select
                 id="konu"
@@ -144,7 +148,7 @@ function App() {
               </small>
             </div>
 
-            <div>
+            <div className="form-group">
               <label htmlFor="mesaj">Mesaj</label>
               <textarea
                 id="mesaj"
