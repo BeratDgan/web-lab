@@ -57,22 +57,38 @@ function App() {
         <section id="projeler">
           <h2>Projelerim</h2>
 
-          <article>
-            <h3>Web Tabanlı Not Alma Uygulaması</h3>
-            <p>
-              Kullanıcıların not oluşturabildiği ve düzenleyebildiği
-              full stack bir uygulama.
-            </p>
-            <a href="#">Projeyi Gör</a>
-          </article>
+          <div className="project-grid">
+            <article className="project-card">
+              <img src="https://placehold.co/600x200" alt="Not alma uygulaması arayüzü" />
+              <h3>Not Alma Uygulaması</h3>
+              <p>Kullanıcıların not oluşturabildiği ve düzenleyebildiği full stack bir uygulama.</p>
+              <ul className="skill-tags">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </article>
 
-          <article>
-            <h3>Kişisel Blog Sitesi</h3>
-            <p>
-              Dinamik içerik yönetimi olan responsive bir blog platformu.
-            </p>
-            <a href="#">Projeyi Gör</a>
-          </article>
+            <article className="project-card">
+              <img src="https://placehold.co/600x200" alt="Blog uygulaması yazı listesi görünümü" />
+              <h3>Blog Uygulaması</h3>
+              <p>Kişisel blog platformu. Markdown destekli yazı editörü.</p>
+              <ul className="skill-tags">
+                <li>TypeScript</li>
+                <li>Next.js</li>
+              </ul>
+            </article>
+
+            <article className="project-card">
+              <img src="https://placehold.co/600x200" alt="Hava durumu uygulaması arayüzü" />
+              <h3>Hava Durumu</h3>
+              <p>OpenWeather API ile anlık hava durumu bilgisi.</p>
+              <ul className="skill-tags">
+                <li>JavaScript</li>
+                <li>API</li>
+              </ul>
+            </article>
+          </div>
         </section>
 
         {/* İLETİŞİM */}
