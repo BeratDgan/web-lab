@@ -28,11 +28,20 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-size: var(--text-base);
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: var(--text-3xl);
   line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
 }
 
 button {
