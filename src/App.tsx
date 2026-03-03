@@ -8,7 +8,7 @@ function App() {
 
       {/* HEADER */}
       <header>
-        <div>
+        <div className="site-title">
           <h1>Berat Doğan</h1>
         </div>
 
