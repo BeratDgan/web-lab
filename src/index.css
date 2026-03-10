@@ -1,3 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* Renkler */
+  --color-primary:   #1E3A8A;
+  --color-secondary: #2563EB;
+  --color-accent:    #7C3AED;
+  --color-bg:        #FFFFFF;
+  --color-text:      #1F2937;
+  --color-muted:     #6B7280;
+  --color-surface:   #F9FAFB;
+  --color-border:    #E5E7EB;
+  --color-error:     #DC2626;
+  --color-success:   #16A34A;
+
+  /* Font aileleri */
+  --font-family-sans: system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Fira Code', 'Consolas', monospace;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
