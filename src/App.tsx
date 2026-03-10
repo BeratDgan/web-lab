@@ -1,5 +1,6 @@
 import Button from './components/Button'
 import Input from './components/Input'
+import Card from './components/Card'
 
 const projects = [
   {
@@ -153,6 +154,34 @@ function App() {
             value="Düzenlenemez"
             onChange={() => {}}
           />
+        </div>
+      </section>
+
+      {/* ===== UI KIT: Card ===== */}
+      <section className="space-y-6 p-8 max-w-6xl mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Card</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <Card
+            variant="elevated"
+            title="Proje A"
+            image="https://placehold.co/600x192"
+            imageAlt="Proje ekran görüntüsü"
+          >
+            <p>Bu bir elevated (gölgeli) kart.</p>
+          </Card>
+
+          <Card variant="outlined" title="Proje B">
+            <p>Bu bir outlined (çerçeveli) kart.</p>
+          </Card>
+
+          <Card
+            variant="filled"
+            title="Proje C"
+            footer={<Button size="sm">Detay</Button>}
+          >
+            <p>Bu bir filled (dolgulu) kart.</p>
+          </Card>
         </div>
       </section>
     </div>
