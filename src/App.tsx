@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Button from './components/Button'
 import Input from './components/Input'
 import Card from './components/Card'
+import profileImage from './image.png'
 
 const skills = ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Git']
 
@@ -95,7 +96,7 @@ function App() {
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
             <figure className="shrink-0">
               <img
-                src="images.png"
+                src={profileImage}
                 alt="Berat Doğan profil fotoğrafı"
                 className="w-40 h-40 rounded-full object-cover shadow-lg"
               />
