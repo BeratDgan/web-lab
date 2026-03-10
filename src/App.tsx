@@ -1,37 +1,52 @@
 import Button from './components/Button'
 import Input from './components/Input'
 import Card from './components/Card'
-import Alert from './components/Alert'
+
+const skills = ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Git']
 
 const projects = [
   {
     title: 'E-Ticaret Sitesi',
-    description: 'React ve Node.js ile geliştirilmiş tam kapsamlı bir e-ticaret platformu.',
+    description: 'React ve Node.js ile tam kapsamlı e-ticaret platformu.',
     image: 'https://placehold.co/600x192',
-    alt: 'E-Ticaret sitesi arayüzü',
+    imageAlt: 'E-Ticaret anasayfa görünümü',
     tags: ['React', 'Node.js', 'MongoDB'],
   },
   {
     title: 'Blog Uygulaması',
     description: 'Kişisel blog platformu. Markdown destekli yazı editörü.',
     image: 'https://placehold.co/600x192',
-    alt: 'Blog uygulaması yazı listesi',
+    imageAlt: 'Blog uygulaması yazı listesi',
     tags: ['TypeScript', 'Next.js'],
   },
   {
     title: 'Hava Durumu',
     description: 'OpenWeather API ile anlık hava durumu bilgisi.',
     image: 'https://placehold.co/600x192',
-    alt: 'Hava durumu uygulaması arayüzü',
+    imageAlt: 'Hava durumu uygulaması arayüzü',
     tags: ['JavaScript', 'API'],
   },
 ]
 
+const navLinks = [
+  { href: '#hakkimda', label: 'Hakkımda' },
+  { href: '#projeler', label: 'Projeler' },
+  { href: '#iletisim', label: 'İletişim' },
+]
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-      {/* Dark Mode Toggle */}
+      {/* ===== SKIP LINK ===== */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg"
+      >
+        Ana içeriğe atla
+      </a>
+
+      {/* ===== DARK MODE TOGGLE ===== */}
       <button
         onClick={() => document.documentElement.classList.toggle('dark')}
         className="fixed top-4 right-4 z-50 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-lg hover:scale-110 transition-transform"
@@ -41,176 +56,138 @@ function App() {
         <span className="hidden dark:inline">&#9728;</span>
       </button>
 
-      <section className="px-4 py-12 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-          Projelerim
-        </h2>
+      {/* ===== HEADER ===== */}
+      <header className="sticky top-0 z-40 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <h1 className="text-xl font-bold text-blue-800 dark:text-blue-300">
+            Berat Doğan
+          </h1>
+          <nav aria-label="Ana navigasyon">
+            <ul className="flex flex-wrap gap-2">
+              {navLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="px-3 py-1 rounded-md text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-800 transition-colors"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-        {/* Mobil: 1 sütun, Tablet: 2 sütun, Desktop: 3 sütun */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <article
-              key={project.title}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-gray-900 border border-transparent dark:border-gray-700 overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-            >
+      <main id="main-content">
+
+        {/* ===== HAKKIMDA ===== */}
+        <section id="hakkimda" className="py-16 px-4">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
+            <figure className="shrink-0">
               <img
-                src={project.image}
-                alt={project.alt}
-                className="w-full h-48 object-cover"
+                src="https://placehold.co/160x160"
+                alt="Berat Doğan vesikalık fotoğrafı"
+                className="w-40 h-40 rounded-full object-cover shadow-lg"
               />
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+            </figure>
+
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center md:text-left">
+                Hakkımda
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                Bilgisayar Mühendisliği öğrencisiyim. Frontend geliştirici olarak
+                modern web teknolojileriyle kullanıcı dostu arayüzler oluşturuyorum.
+                Backend geliştirme ve cloud teknolojileriyle de ilgileniyorum.
+              </p>
+              <ul className="flex flex-wrap gap-2" role="list" aria-label="Beceri etiketleri">
+                {skills.map((skill) => (
+                  <li
+                    key={skill}
+                    className="bg-blue-800 dark:bg-blue-900 text-white px-3 py-1 rounded-full text-sm"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== PROJELERİM ===== */}
+        <section id="projeler" className="py-16 px-4 bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">
+              Projelerim
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project) => (
+                <Card
+                  key={project.title}
+                  variant="elevated"
+                  title={project.title}
+                  image={project.image}
+                  imageAlt={project.imageAlt}
+                  footer={
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2 py-1 rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  }
+                >
+                  <p className="text-sm">{project.description}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===== İLETİŞİM ===== */}
+        <section id="iletisim" className="py-16 px-4">
+          <div className="max-w-lg mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
+              İletişim
+            </h2>
+            <form className="space-y-4" noValidate>
+              <Input id="contact-name" label="Ad Soyad" placeholder="Ahmet Yılmaz" required />
+              <Input id="contact-email" label="E-posta" type="email" placeholder="ad@mail.com" required />
+
+              <div className="space-y-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >
+                  Mesajınız
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  required
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 transition-colors"
+                />
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
-      {/* ===== UI KIT: Button ===== */}
-      <section className="space-y-8 p-8 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Button</h2>
-
-        {/* Boyut varyantları */}
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
-            Boyutlar
-          </h3>
-          <div className="flex flex-wrap items-end gap-4">
-            <Button size="sm">Küçük</Button>
-            <Button size="md">Orta</Button>
-            <Button size="lg">Büyük</Button>
+              <Button variant="primary" size="lg" type="submit" className="w-full">
+                Gönder
+              </Button>
+            </form>
           </div>
-        </div>
+        </section>
 
-        {/* Renk varyantları */}
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
-            Renkler
-          </h3>
-          <div className="flex flex-wrap gap-4">
-            <Button variant="primary">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="danger">Danger</Button>
-            <Button variant="ghost">Ghost</Button>
-          </div>
-        </div>
+      </main>
 
-        {/* Disabled durumu */}
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
-            Disabled
-          </h3>
-          <div className="flex flex-wrap gap-4">
-            <Button variant="primary" disabled>Primary</Button>
-            <Button variant="secondary" disabled>Secondary</Button>
-            <Button variant="danger" disabled>Danger</Button>
-            <Button variant="ghost" disabled>Ghost</Button>
-          </div>
-        </div>
-      </section>
+      {/* ===== FOOTER ===== */}
+      <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 text-center py-6 px-4 text-gray-500 dark:text-gray-400 text-sm">
+        <p>&copy; 2025 Berat Doğan. Tüm hakları saklıdır.</p>
+      </footer>
 
-      {/* ===== UI KIT: Input ===== */}
-      <section className="space-y-6 p-8 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Input</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
-          <Input
-            id="name"
-            label="Ad Soyad"
-            placeholder="Ahmet Yılmaz"
-          />
-          <Input
-            id="email"
-            label="E-posta"
-            type="email"
-            placeholder="ad@mail.com"
-            helpText="Örnek: ad@mail.com"
-          />
-          <Input
-            id="pass"
-            label="Şifre"
-            type="password"
-            placeholder="········"
-            error="En az 8 karakter olmalı"
-          />
-          <Input
-            id="disabled"
-            label="Devre Dışı"
-            disabled
-            value="Düzenlenemez"
-            onChange={() => {}}
-          />
-        </div>
-      </section>
-
-      {/* ===== UI KIT: Card ===== */}
-      <section className="space-y-6 p-8 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Card</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <Card
-            variant="elevated"
-            title="Proje A"
-            image="https://placehold.co/600x192"
-            imageAlt="Proje ekran görüntüsü"
-          >
-            <p>Bu bir elevated (gölgeli) kart.</p>
-          </Card>
-
-          <Card variant="outlined" title="Proje B">
-            <p>Bu bir outlined (çerçeveli) kart.</p>
-          </Card>
-
-          <Card
-            variant="filled"
-            title="Proje C"
-            footer={<Button size="sm">Detay</Button>}
-          >
-            <p>Bu bir filled (dolgulu) kart.</p>
-          </Card>
-        </div>
-      </section>
-
-      {/* ===== UI KIT: Alert ===== */}
-      <section className="space-y-4 p-8 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Alert</h2>
-
-        <Alert variant="info" title="Bilgi">
-          Formunuz başarıyla kaydedildi.
-        </Alert>
-
-        <Alert variant="success" title="Başarılı">
-          İşlem tamamlandı!
-        </Alert>
-
-        <Alert variant="warning" title="Uyarı">
-          Oturum 5 dakika sonra sona erecek.
-        </Alert>
-
-        <Alert
-          variant="error"
-          title="Hata"
-          dismissible
-          onDismiss={() => console.log('kapatıldı')}
-        >
-          Bağlantı kurulamadı. Tekrar deneyin.
-        </Alert>
-      </section>
     </div>
   )
 }
