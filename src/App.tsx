@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from './components/Button'
 import Input from './components/Input'
 import Card from './components/Card'
@@ -74,6 +75,14 @@ function App() {
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/ui-kit"
+                  className="px-3 py-1 rounded-md bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                >
+                  UI Kit
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
