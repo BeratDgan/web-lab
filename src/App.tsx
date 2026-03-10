@@ -1,4 +1,5 @@
 import Button from './components/Button'
+import Input from './components/Input'
 
 const projects = [
   {
@@ -118,6 +119,40 @@ function App() {
             <Button variant="danger" disabled>Danger</Button>
             <Button variant="ghost" disabled>Ghost</Button>
           </div>
+        </div>
+      </section>
+
+      {/* ===== UI KIT: Input ===== */}
+      <section className="space-y-6 p-8 max-w-6xl mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Input</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+          <Input
+            id="name"
+            label="Ad Soyad"
+            placeholder="Ahmet Yılmaz"
+          />
+          <Input
+            id="email"
+            label="E-posta"
+            type="email"
+            placeholder="ad@mail.com"
+            helpText="Örnek: ad@mail.com"
+          />
+          <Input
+            id="pass"
+            label="Şifre"
+            type="password"
+            placeholder="········"
+            error="En az 8 karakter olmalı"
+          />
+          <Input
+            id="disabled"
+            label="Devre Dışı"
+            disabled
+            value="Düzenlenemez"
+            onChange={() => {}}
+          />
         </div>
       </section>
     </div>
