@@ -1,6 +1,7 @@
 import Button from './components/Button'
 import Input from './components/Input'
 import Card from './components/Card'
+import Alert from './components/Alert'
 
 const projects = [
   {
@@ -183,6 +184,32 @@ function App() {
             <p>Bu bir filled (dolgulu) kart.</p>
           </Card>
         </div>
+      </section>
+
+      {/* ===== UI KIT: Alert ===== */}
+      <section className="space-y-4 p-8 max-w-6xl mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Alert</h2>
+
+        <Alert variant="info" title="Bilgi">
+          Formunuz başarıyla kaydedildi.
+        </Alert>
+
+        <Alert variant="success" title="Başarılı">
+          İşlem tamamlandı!
+        </Alert>
+
+        <Alert variant="warning" title="Uyarı">
+          Oturum 5 dakika sonra sona erecek.
+        </Alert>
+
+        <Alert
+          variant="error"
+          title="Hata"
+          dismissible
+          onDismiss={() => console.log('kapatıldı')}
+        >
+          Bağlantı kurulamadı. Tekrar deneyin.
+        </Alert>
       </section>
     </div>
   )
