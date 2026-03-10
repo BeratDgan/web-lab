@@ -1,3 +1,5 @@
+import Button from './components/Button'
+
 const projects = [
   {
     title: 'E-Ticaret Sitesi',
@@ -73,6 +75,49 @@ function App() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* ===== UI KIT: Button ===== */}
+      <section className="space-y-8 p-8 max-w-6xl mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Button</h2>
+
+        {/* Boyut varyantları */}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
+            Boyutlar
+          </h3>
+          <div className="flex flex-wrap items-end gap-4">
+            <Button size="sm">Küçük</Button>
+            <Button size="md">Orta</Button>
+            <Button size="lg">Büyük</Button>
+          </div>
+        </div>
+
+        {/* Renk varyantları */}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
+            Renkler
+          </h3>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="primary">Primary</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="danger">Danger</Button>
+            <Button variant="ghost">Ghost</Button>
+          </div>
+        </div>
+
+        {/* Disabled durumu */}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
+            Disabled
+          </h3>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="primary" disabled>Primary</Button>
+            <Button variant="secondary" disabled>Secondary</Button>
+            <Button variant="danger" disabled>Danger</Button>
+            <Button variant="ghost" disabled>Ghost</Button>
+          </div>
         </div>
       </section>
     </div>
