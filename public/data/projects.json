@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "E-Ticaret Platformu",
+    "description": "React ve Node.js ile geliştirilmiş, tam kapsamlı bir e-ticaret uygulaması. Ödeme entegrasyonu, ürün yönetimi ve kullanıcı paneli içerir.",
+    "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
+    "featured": true,
+    "year": 2025,
+    "category": "Full Stack"
+  },
+  {
+    "id": "2",
+    "title": "Hava Durumu Uygulaması",
+    "description": "OpenWeather API kullanarak anlık hava durumu bilgilerini gösteren modern bir web uygulaması. Konum bazlı arama ve 5 günlük tahmin sunar.",
+    "tech": ["React", "TypeScript", "Tailwind CSS", "REST API"],
+    "featured": false,
+    "year": 2024,
+    "category": "Frontend"
+  },
+  {
+    "id": "3",
+    "title": "Görev Yönetim Sistemi",
+    "description": "Ekiplerin projelerini ve görevlerini yönetebileceği kanban tarzı bir uygulama. Sürükle-bırak, etiketleme ve bildirim özellikleri içerir.",
+    "tech": ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
+    "featured": true,
+    "year": 2025,
+    "category": "Full Stack"
+  },
+  {
+    "id": "4",
+    "title": "Portfolyo Web Sitesi",
+    "description": "Kişisel portfolyo ve blog sayfası. Markdown destekli blog yazıları, proje galerisi ve iletişim formu barındırır.",
+    "tech": ["React", "Tailwind CSS", "Vite"],
+    "featured": false,
+    "year": 2024,
+    "category": "Frontend"
+  },
+  {
+    "id": "5",
+    "title": "REST API Servisi",
+    "description": "Express.js ve PostgreSQL kullanarak oluşturulmuş RESTful API. JWT kimlik doğrulama, rate limiting ve Swagger dokümantasyonu içerir.",
+    "tech": ["Node.js", "Express", "PostgreSQL", "JWT", "Swagger"],
+    "featured": false,
+    "year": 2023,
+    "category": "Backend"
+  },
+  {
+    "id": "6",
+    "title": "Fitness Takip Uygulaması",
+    "description": "React Native ile geliştirilmiş mobil fitness uygulaması. Antrenman takibi, kalori hesaplama ve ilerleme grafikleri sunar.",
+    "tech": ["React Native", "TypeScript", "Firebase", "Expo"],
+    "featured": true,
+    "year": 2024,
+    "category": "Mobil"
+  },
+  {
+    "id": "7",
+    "title": "Chat Uygulaması",
+    "description": "Gerçek zamanlı mesajlaşma uygulaması. WebSocket tabanlı iletişim, dosya paylaşımı ve grup sohbetleri destekler.",
+    "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
+    "featured": false,
+    "year": 2023,
+    "category": "Full Stack"
+  },
+  {
+    "id": "8",
+    "title": "Blog CMS Paneli",
+    "description": "İçerik yönetim sistemi arka yüzü. Yazı oluşturma, medya yükleme, kullanıcı rolleri ve SEO optimizasyon araçları içerir.",
+    "tech": ["Express", "MongoDB", "EJS", "Multer"],
+    "featured": false,
+    "year": 2023,
+    "category": "Backend"
+  }
+]
